@@ -27,6 +27,9 @@
  */
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 
+    Router::connect('/circle/:radius',                 ['controller' => 'geometry', 'action' => 'json', 'type' => 'circle']);
+    Router::connect('/triangle/:sidea/:sideb/:sidec',  ['controller' => 'geometry', 'action' => 'json', 'type' => 'triangle']);
+
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
